@@ -2,11 +2,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Home from "./Pages/Home/Home";
 import Quiz from "./Pages/Quiz/Quiz";
 import Result from "./Pages/Result/Result";
 import { useState } from "react";
 import axios from "axios";
+import Hero from "./components/Hero/Hero";
+import StartQuiz from "./Pages/StartQuiz/StartQuiz";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   const [name, setName] = useState("");
@@ -28,12 +31,16 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <Header />
+        {/* <Header /> */}
+        {/* <Hero/>  */}
         <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route
-            path="/"
+            path="/start"
             element={
-              <Home
+              <StartQuiz
                 name={name}
                 setName={setName}
                 fetchQuestions={fetchQuestions}
@@ -52,11 +59,14 @@ function App() {
               />
             }
           />
-          <Route path="/result" element={<Result name={name} score={score} />} />
+          <Route
+            path="/result"
+            element={<Result name={name} score={score} />}
+          />
         </Routes>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

@@ -4,7 +4,6 @@ import "./Question.css";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-
 const Question = ({
   currQues,
   setCurrQues,
@@ -54,7 +53,7 @@ const Question = ({
     <div className="question">
       <h1>Question : {currQues + 1}</h1>
 
-      <div className="single-questions">
+      <div className="singleQuestion">
         <h2>{questions[currQues].question}</h2>
 
         <div className="options">
@@ -82,7 +81,7 @@ const Question = ({
             href="/"
             // onClick={handleQuit}
           >
-            Quit
+            Quit 🛑
           </Button>
           <Button
             varient="contained"
@@ -92,7 +91,7 @@ const Question = ({
             // href="/"
             onClick={handleNext}
           >
-            Next Question
+            Next Question 🡆
           </Button>
         </div>
       </div>

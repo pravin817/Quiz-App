@@ -1,0 +1,13 @@
+.welcome {
+    /* border: 2px solid red; */
+    display: flex;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+
+    color: rgb(255, 0, 157);
+
+}

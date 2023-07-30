@@ -1,4 +1,4 @@
-.title{
+/* .title{
     text-transform: uppercase;
     font-family: "Monstserrat",sans-serif;
     font-size: 8vw;
@@ -15,4 +15,31 @@
     width: 100%;
     margin:10px;
     background-color: grey;
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* max-height: 4rem; */
+}
+
+.nav-right {
+    /* padding-right: 20px; */
+}
+
+.nav-header{
+    color: rgb(255, 0, 157);
+}
+
+.nav-right ul {
+    /* border: 2px solid rebeccapurple; */
+
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+    align-items: center;
+    gap: 20px;
+    padding: 2px;
 }
